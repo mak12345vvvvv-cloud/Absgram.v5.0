@@ -1,0 +1,34 @@
+{
+  "name": "AbSgram HD",
+  "short_name": "AbSgram",
+  "description": "HD Видеозвонки и сообщения",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1A1A1A",
+  "theme_color": "#FF6B35",
+  "orientation": "portrait",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "https://via.placeholder.com/192x192?text=AbSgram",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://via.placeholder.com/512x512?text=AbSgram",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Новый чат",
+      "short_name": "Чат",
+      "description": "Начать новый чат",
+      "url": "/?newchat",
+      "icons": [{ "src": "https://via.placeholder.com/96x96?text=+", "sizes": "96x96" }]
+    }
+  ]
+}
