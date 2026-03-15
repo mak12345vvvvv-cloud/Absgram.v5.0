@@ -5009,12 +5009,12 @@
                     (userData.lastActive.toDate ? userData.lastActive.toDate() : new Date(userData.lastActive)) : 
                     new Date(0);
                 const now = new Date();
-                const diffMinutes = Math.floor((now - lastActive) / (1000 * 60));
+                const diffSeconds = Math.floor((now - lastActive) / 1000);
                 
                 let statusHTML = '';
-                if (diffMinutes < 2) {
+                if (diffSeconds < 5) {
                     statusHTML = '<span class="user-status real-online">🟢 online</span>';
-                } else if (diffMinutes < 5) {
+                } else if (diffSeconds < 300) {
                     statusHTML = '<span class="user-status recently-active">🟡 был(а) недавно</span>';
                 } else {
                     statusHTML = `<span class="user-status real-offline">⚫ был(а) ${formatLastSeen(lastActive)}</span>`;
@@ -5616,9 +5616,9 @@
                     (userData.lastActive.toDate ? userData.lastActive.toDate() : new Date(userData.lastActive)) : 
                     new Date(0);
                 const now = new Date();
-                const diffMinutes = Math.floor((now - lastActive) / (1000 * 60));
+                const diffSeconds = Math.floor((now - lastActive) / 1000);
                 
-                currentUser.realIsOnline = diffMinutes < 2;
+                currentUser.realIsOnline = diffSeconds < 5;
                 
                 console.log("✅ Данные пользователя загружены:", currentUser);
                 updateProfile();
@@ -6020,9 +6020,11 @@
             } else if (user.lastActive) {
                 const lastActive = user.lastActive.toDate ? user.lastActive.toDate() : new Date(user.lastActive);
                 const now = new Date();
-                const diffMinutes = Math.floor((now - lastActive) / (1000 * 60));
+                const diffSeconds = Math.floor((now - lastActive) / 1000);
                 
-                if (diffMinutes < 5) {
+                if (diffSeconds < 5) {
+                    statusHTML = '<span class="user-status real-online">🟢 online</span>';
+                } else if (diffSeconds < 300) {
                     statusHTML = '<span class="user-status recently-active">🟡 был(а) недавно</span>';
                 } else {
                     statusHTML = `<span class="user-status real-offline">⚫ был(а) ${formatLastSeen(lastActive)}</span>`;
@@ -6082,9 +6084,11 @@
             } else if (user.lastActive) {
                 const lastActive = user.lastActive.toDate ? user.lastActive.toDate() : new Date(user.lastActive);
                 const now = new Date();
-                const diffMinutes = Math.floor((now - lastActive) / (1000 * 60));
+                const diffSeconds = Math.floor((now - lastActive) / 1000);
                 
-                if (diffMinutes < 5) {
+                if (diffSeconds < 5) {
+                    statusHTML = '<span class="user-status real-online">🟢 online</span>';
+                } else if (diffSeconds < 300) {
                     statusHTML = '<span class="user-status recently-active">🟡 был(а) недавно</span>';
                 } else {
                     statusHTML = `<span class="user-status real-offline">⚫ был(а) ${formatLastSeen(lastActive)}</span>`;
@@ -6140,9 +6144,11 @@
             } else if (user.lastActive) {
                 const lastActive = user.lastActive.toDate ? user.lastActive.toDate() : new Date(user.lastActive);
                 const now = new Date();
-                const diffMinutes = Math.floor((now - lastActive) / (1000 * 60));
+                const diffSeconds = Math.floor((now - lastActive) / 1000);
                 
-                if (diffMinutes < 5) {
+                if (diffSeconds < 5) {
+                    statusHTML = '<span class="user-status real-online">🟢 online</span>';
+                } else if (diffSeconds < 300) {
                     statusHTML = '<span class="user-status recently-active">🟡 был(а) недавно</span>';
                 } else {
                     statusHTML = `<span class="user-status real-offline">⚫ был(а) ${formatLastSeen(lastActive)}</span>`;
@@ -6749,12 +6755,12 @@
                     (userData.lastActive.toDate ? userData.lastActive.toDate() : new Date(userData.lastActive)) : 
                     new Date(0);
                 const now = new Date();
-                const diffMinutes = Math.floor((now - lastActive) / (1000 * 60));
+                const diffSeconds = Math.floor((now - lastActive) / 1000);
                 
                 chat.otherUser = {
                     id: otherUserId,
                     ...userData,
-                    realIsOnline: diffMinutes < 2
+                    realIsOnline: diffSeconds < 5
                 };
                 allUsers.set(otherUserId, chat.otherUser);
                 chat.displayName = getUserDisplayName(chat.otherUser);
@@ -7797,9 +7803,9 @@
                         (userData.lastActive.toDate ? userData.lastActive.toDate() : new Date(userData.lastActive)) : 
                         new Date(0);
                     const now = new Date();
-                    const diffMinutes = Math.floor((now - lastActive) / (1000 * 60));
+                    const diffSeconds = Math.floor((now - lastActive) / 1000);
                     
-                    const isOnline = diffMinutes < 2;
+                    const isOnline = diffSeconds < 5;
                     
                     if (isOnline) {
                         document.getElementById('chatStatus').innerHTML = '<span class="user-status real-online">🟢 online</span>';
