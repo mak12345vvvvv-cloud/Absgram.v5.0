@@ -1,12 +1,13 @@
- 
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>AbSgram HD — хронология сообщений</title>
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#FF6B35">
     <style>
-        /* ========== СТИЛИ ПОЛНОСТЬЮ (БЕЗ ИЗМЕНЕНИЙ) ========== */
+        /* ========== СТИЛИ ПОЛНОСТЬЮ ========== */
         :root {
             --primary: #FF6B35;
             --primary-dark: #E55A2B;
@@ -565,7 +566,6 @@
             border-radius: 4px;
         }
         
-        /* Стили разделителя дат (НОВЫЙ) */
         .date-separator {
             display: flex;
             align-items: center;
@@ -672,7 +672,6 @@
             color: #4CAF50;
         }
         
-        /* Стили для цитируемого сообщения (ответ) */
         .reply-preview {
             background: rgba(0,0,0,0.2);
             border-left: 4px solid var(--primary);
@@ -1563,7 +1562,6 @@
             to { transform: translateY(0); opacity: 1; }
         }
         
-        /* ЯРКИЕ КНОПКИ ЗВОНКА */
         .call-btn {
             width: 40px;
             height: 40px;
@@ -2106,7 +2104,6 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
         
-        /* Стили для выбора типа звонка */
         .call-type-selector {
             display: flex;
             gap: 15px;
@@ -2148,7 +2145,6 @@
             font-weight: 600;
         }
         
-        /* Контейнер для видео */
         .video-container {
             position: relative;
             width: 100%;
@@ -2194,7 +2190,6 @@
             z-index: 20;
         }
         
-        /* Кнопка присоединения к звонку в сообщении */
         .join-call-message-btn {
             background: linear-gradient(135deg, #4CAF50 0%, #388E3C 100%);
             color: white;
@@ -2218,7 +2213,6 @@
             box-shadow: 0 6px 20px rgba(76, 175, 80, 0.6);
         }
 
-        /* ЗЕЛЕНЫЙ ИНДИКАТОР ГОВОРЕНИЯ В ЗВОНКЕ */
         .speaking-indicator {
             position: absolute;
             top: 10px;
@@ -2248,7 +2242,6 @@
             display: block;
         }
 
-        /* КНОПКА ОТКЛЮЧЕНИЯ ЗВОНКА */
         .disable-call-btn {
             width: 40px;
             height: 40px;
@@ -2290,7 +2283,6 @@
             opacity: 0.8;
         }
         
-        /* Стили для видео-превью */
         .video-preview-modal {
             position: fixed;
             top: 0;
@@ -2388,7 +2380,6 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
         
-        /* Показатель качества соединения */
         .connection-quality {
             position: absolute;
             top: 10px;
@@ -2415,7 +2406,6 @@
             color: #F44336;
         }
         
-        /* Уведомление о больших файлах */
         .file-size-warning {
             color: var(--warning);
             font-size: 12px;
@@ -2425,7 +2415,6 @@
             gap: 5px;
         }
 
-        /* Индикатор сжатия */
         .compression-indicator {
             display: flex;
             align-items: center;
@@ -2435,7 +2424,6 @@
             margin-top: 5px;
         }
 
-        /* Кнопка выбора файла с иконкой */
         .custom-file-input {
             position: relative;
             overflow: hidden;
@@ -2453,7 +2441,6 @@
             cursor: pointer;
         }
 
-        /* Прогресс загрузки файла */
         .upload-progress-container {
             position: absolute;
             bottom: 0;
@@ -2504,7 +2491,6 @@
             font-weight: 600;
         }
 
-        /* Индикатор отправки сообщения */
         .sending-indicator {
             position: absolute;
             top: 10px;
@@ -2522,7 +2508,6 @@
             border-width: 2px;
         }
 
-        /* Стили для блокировки звонков */
         .call-blocked-overlay {
             position: absolute;
             top: 0;
@@ -2546,7 +2531,6 @@
             font-weight: 600;
         }
 
-        /* Стили для видеосообщений (кружки) */
         .video-circle-message {
             width: 300px;
             height: 300px;
@@ -2628,7 +2612,6 @@
             transition: width 0.1s;
         }
 
-        /* Модальное окно записи видеосообщения */
         .video-recording-modal {
             position: fixed;
             top: 0;
@@ -2745,7 +2728,6 @@
             margin-bottom: 10px;
         }
 
-        /* Индикатор записи */
         .recording-indicator {
             position: absolute;
             top: 15px;
@@ -2770,7 +2752,6 @@
             animation: pulse 1s infinite;
         }
 
-        /* Кнопка отправки видеосообщений */
         .video-message-btn {
             width: 40px;
             height: 40px;
@@ -2793,7 +2774,6 @@
             color: #F06292;
         }
         
-        /* Индикатор загрузки больших видео */
         .video-chunk-info {
             background: rgba(255,255,255,0.1);
             padding: 10px;
@@ -2830,7 +2810,6 @@
             font-weight: 600;
         }
 
-        /* Кнопки ввода сообщений меньшего размера */
         .compact-controls {
             display: flex;
             gap: 5px;
@@ -2856,7 +2835,6 @@
             border-radius: 18px;
         }
 
-        /* Видео-превью с крестиком */
         .video-message-preview-modal {
             position: fixed;
             top: 0;
@@ -2912,7 +2890,6 @@
             transform: scale(1.1);
         }
 
-        /* Уведомление о скачивании файла */
         .download-notification {
             position: fixed;
             bottom: 20px;
@@ -2944,7 +2921,6 @@
             font-size: 14px;
         }
 
-        /* Push уведомления */
         .push-notification {
             position: fixed;
             top: 20px;
@@ -3007,7 +2983,6 @@
             background: rgba(255,255,255,0.2);
         }
 
-        /* --- НОВЫЕ СТИЛИ ДЛЯ РЕДАКТИРОВАНИЯ, РЕАКЦИЙ --- */
         .message-actions {
             position: absolute;
             top: -20px;
@@ -3083,7 +3058,6 @@
             margin-top: 5px;
         }
 
-        /* --- НОВЫЕ СТИЛИ: ПОИСК СООБЩЕНИЙ --- */
         .search-messages-container {
             padding: 10px 15px;
             background: rgba(255,107,53,0.05);
@@ -3118,7 +3092,6 @@
             font-size: 13px;
         }
 
-        /* --- НОВЫЕ СТИЛИ: КАНАЛЫ --- */
         .channel-info-header {
             text-align: center;
             margin-bottom: 25px;
@@ -3175,12 +3148,10 @@
         .channel-unsubscribe-btn:hover {
             background: rgba(255,255,255,0.2);
         }
-        /* Доп. стили для реакций на каналах */
         .message.channel-message {
             border-left: 4px solid var(--channel);
         }
 
-        /* === НОВЫЕ СТИЛИ: ИНДИКАТОРЫ НАБОРА ТЕКСТА И ЗВОНКОВ === */
         .typing-indicator {
             font-size: 13px;
             color: var(--primary-light);
@@ -3221,7 +3192,6 @@
             100% { opacity: 0.7; }
         }
 
-        /* === НОВЫЕ СТИЛИ: КАСТОМНЫЕ РЕАКЦИИ === */
         .custom-reaction-modal {
             position: fixed;
             top: 0;
@@ -3271,9 +3241,7 @@
             text-align: center;
             margin-bottom: 15px;
         }
-        /* ===== КОНЕЦ СТИЛЕЙ ===== */
 
-        /* === НОВЫЕ СТИЛИ ДЛЯ ПРОГРЕССА ЗАГРУЗКИ ФАЙЛОВ === */
         .upload-progress-message {
             position: relative;
             background: rgba(255,255,255,0.05);
@@ -3297,7 +3265,6 @@
             width: 0%;
             transition: width 0.3s;
         }
-        /* PDF просмотр */
         .pdf-message {
             margin-top: 10px;
             border-radius: 10px;
@@ -3320,7 +3287,6 @@
             align-items: center;
             color: var(--primary);
         }
-        /* Стили для любого документа */
         .doc-preview {
             background: rgba(255,255,255,0.05);
             padding: 10px;
@@ -3355,7 +3321,34 @@
                 allowLocalhostAsSecureOrigin: true,
                 serviceWorkerParam: { scope: '/' },
                 serviceWorkerPath: 'OneSignalSDKWorker.js',
+                subdomainName: "absgram",
+                requiresUserPrivacyConsent: false
             });
+            
+            if ('serviceWorker' in navigator) {
+                try {
+                    const registration = await navigator.serviceWorker.register('/sw.js', {
+                        scope: '/'
+                    });
+                    console.log('✅ Service Worker зарегистрирован:', registration.scope);
+                    
+                    await navigator.serviceWorker.ready;
+                    console.log('✅ Service Worker готов к работе');
+                    
+                    if ('Notification' in window) {
+                        if (Notification.permission === 'default') {
+                            setTimeout(() => {
+                                const permissionDiv = document.getElementById('notificationPermission');
+                                if (permissionDiv) {
+                                    permissionDiv.classList.remove('hidden');
+                                }
+                            }, 3000);
+                        }
+                    }
+                } catch (error) {
+                    console.error('❌ Ошибка регистрации Service Worker:', error);
+                }
+            }
         });
     </script>
 </head>
@@ -3418,7 +3411,6 @@
             <button class="btn" id="profileBtn">👤 Профиль</button>
         </div>
         
-        <!-- ПОИСК ПОЛЬЗОВАТЕЛЕЙ И КАНАЛОВ -->
         <div class="search-container">
             <input type="text" class="search-input" id="searchUsersInput" placeholder="Поиск пользователей, каналов или ссылка..." autocomplete="off">
         </div>
@@ -3461,7 +3453,6 @@
             </div>
         </div>
         
-        <!-- ПОИСК ПО СООБЩЕНИЯМ -->
         <div class="search-messages-container" id="searchMessagesContainer">
             <input type="text" class="search-messages-input" id="searchMessagesInput" placeholder="🔍 Поиск в чате...">
             <span class="search-messages-count" id="searchMessagesCount"></span>
@@ -3469,7 +3460,6 @@
             <button class="search-messages-btn" id="nextSearchBtn">▼</button>
         </div>
 
-        <!-- ИНДИКАТОР ОТВЕТА -->
         <div id="replyingIndicator" class="replying-indicator hidden">
             <span>Ответ на сообщение: <span id="replyToText">...</span></span>
             <span class="cancel-reply" id="cancelReplyBtn">×</span>
@@ -3539,7 +3529,6 @@
                 </div>
             </div>
 
-            <!-- ИСТОРИЯ (ПОСТЫ) -->
             <div class="info-section">
                 <h3>📝 Моя история</h3>
                 <div id="profilePostsList" class="group-members-list" style="justify-content: flex-start; min-height: 50px;">
@@ -3548,7 +3537,6 @@
                 <button class="btn" style="width: 100%; margin-top: 10px;" id="createPostBtn">➕ Добавить пост</button>
             </div>
             
-            <!-- ТЕСТОВАЯ КНОПКА УВЕДОМЛЕНИЯ -->
             <div class="info-section">
                 <h3>🔔 Тест уведомлений</h3>
                 <div style="text-align: center; margin: 10px 0;">
@@ -3704,7 +3692,6 @@
                 <div class="modal-tab" data-tab="channel">Канал</div>
             </div>
             
-            <!-- ВКЛАДКА ЛИЧНОГО ЧАТА -->
             <div id="singleTab" class="tab-content active">
                 <div class="search-container" style="border: none; padding: 0 0 15px 0;">
                     <input type="text" class="search-input" id="singleSearchInput" placeholder="Поиск пользователей..." autocomplete="off">
@@ -3712,7 +3699,6 @@
                 <div id="singleSearchResults" class="users-list" style="padding: 0; max-height: 300px;"></div>
             </div>
             
-            <!-- ВКЛАДКА СОЗДАНИЯ ГРУППЫ -->
             <div id="groupTab" class="tab-content">
                 <div class="input-group">
                     <label for="groupName">Название группы</label>
@@ -3740,7 +3726,6 @@
                 </button>
             </div>
             
-            <!-- ВКЛАДКА СОЗДАНИЯ КАНАЛА -->
             <div id="channelTab" class="tab-content">
                 <div class="input-group">
                     <label for="channelName">Название канала</label>
@@ -3781,9 +3766,7 @@
             
             <div class="info-section">
                 <h3>Участники</h3>
-                <div class="group-members-list" id="groupInfoMembersList">
-                    <!-- Участники будут добавлены динамически -->
-                </div>
+                <div class="group-members-list" id="groupInfoMembersList"></div>
             </div>
             
             <div class="modal-actions">
@@ -3974,7 +3957,7 @@
         <source src="https://assets.mixkit.co/sfx/preview/mixkit-phone-call-ringing-1106.mp3" type="audio/mpeg">
     </audio>
 
-    <!-- КОНТЕЙНЕР ДЛЯ ПРОГРЕССА ЗАГРУЗКИ (НОВЫЙ) -->
+    <!-- КОНТЕЙНЕР ДЛЯ ПРОГРЕССА ЗАГРУЗКИ -->
     <div id="uploadProgressContainer" style="display: none; position: fixed; bottom: 80px; left: 50%; transform: translateX(-50%); background: var(--sidebar); padding: 15px; border-radius: 15px; border: 2px solid var(--primary); z-index: 2000; width: 90%; max-width: 400px;">
         <div style="margin-bottom: 10px; display: flex; justify-content: space-between;">
             <span id="uploadFileName">Загрузка файла...</span>
@@ -3994,7 +3977,6 @@
     </div>
 
     <script type="module">
-    // ==================== ИМПОРТ FIREBASE v9 ====================
     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
     import { 
         getAuth, 
@@ -4032,7 +4014,6 @@
         deleteObject
     } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-storage.js";
 
-    // ==================== КОНФИГУРАЦИЯ FIREBASE ====================
     const firebaseConfig = {
         apiKey: "AIzaSyBRNl0xA5ie8EGcZ4UIdP0e1IJuacoMarE",
         authDomain: "gocklain-bf553.firebaseapp.com",
@@ -4043,7 +4024,6 @@
         measurementId: "G-1LBP6KFPL9"
     };
 
-    // ==================== ИНИЦИАЛИЗАЦИЯ FIREBASE ====================
     let app, auth, db, storage;
     let authError = false;
 
@@ -4059,7 +4039,6 @@
         showToastNotification("Ошибка подключения к серверу. Работаем в локальном режиме.", "warning");
     }
 
-    // ==================== ГЛОБАЛЬНЫЕ ПЕРЕМЕННЫЕ ====================
     let currentUser = null;
     let currentChat = null;
     let selectedAvatar = null;
@@ -4089,7 +4068,6 @@
     let unreadCounts = new Map();
     let currentMessageSearch = { index: 0, results: [] };
     
-    // WebRTC переменные
     let peerConnection = null;
     let localStream = null;
     let remoteStream = null;
@@ -4103,7 +4081,6 @@
     let typingTimeouts = new Map();
     let incomingCallData = null;
     
-    // Переменные для видеосообщений
     let videoMediaRecorder = null;
     let videoChunks = [];
     let isVideoRecording = false;
@@ -4112,11 +4089,10 @@
     let currentCamera = 'user';
     let videoStream = null;
     let maxVideoDuration = 60;
-    let maxVideoSize = 50 * 1024 * 1024; // 50MB
+    let maxVideoSize = 50 * 1024 * 1024;
     let currentFileUploads = new Map();
     let currentChunkedUploads = new Map();
 
-    // ==================== НОВЫЕ ПЕРЕМЕННЫЕ ====================
     let messageReactions = new Map();
     let currentlyEditingMessage = null;
     let channels = new Map();
@@ -4126,11 +4102,17 @@
     let currentReplyTo = null;
     let posts = new Map();
     
-    // Переменные для загрузки файлов
     let currentUploadTask = null;
     let currentUploadFileId = null;
 
-    // ==================== РЕГИСТРАЦИЯ SERVICE WORKER ====================
+    function checkHTTPS() {
+        if (location.protocol !== 'https:' && location.hostname !== 'localhost' && !location.hostname.includes('127.0.0.1')) {
+            console.warn('⚠️ Уведомления требуют HTTPS. Сайт работает через HTTP, уведомления могут не работать.');
+        }
+    }
+    
+    checkHTTPS();
+
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('/sw.js')
             .then(registration => {
@@ -4147,7 +4129,6 @@
             });
     }
 
-    // ==================== УВЕДОМЛЕНИЯ ЧЕРЕЗ SERVICE WORKER ====================
     async function requestNotificationPermissionFunc() {
         if (!('Notification' in window)) {
             console.log('Этот браузер не поддерживает уведомления');
@@ -4270,10 +4251,6 @@
                 const userData = userDoc.data();
                 if (userData.onesignalId) {
                     console.log('📬 Отправка уведомления через OneSignal:', { userId, title, message });
-                    
-                    if ('OneSignal' in window) {
-                        const OneSignal = window.OneSignal;
-                    }
                 }
             }
         } catch (error) {
@@ -4281,7 +4258,6 @@
         }
     }
 
-    // ==================== ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ ====================
     function showLoading(show) {
         const overlay = document.getElementById('loadingOverlay');
         overlay.classList.toggle('hidden', !show);
@@ -4423,7 +4399,6 @@
         }
     }
 
-    // ==================== НОВЫЕ ФУНКЦИИ ДЛЯ ЗАГРУЗКИ БОЛЬШИХ ФАЙЛОВ ====================
     async function compressImage(file, maxWidth = 1920, maxHeight = 1080, quality = 0.8) {
         return new Promise((resolve, reject) => {
             if (!file.type.startsWith('image/')) {
@@ -4469,7 +4444,6 @@
         });
     }
 
-    // Функция для проверки размера видео (переименована, чтобы избежать конфликта)
     async function validateVideoSize(file, maxSizeMB = 500) {
         const maxSizeBytes = maxSizeMB * 1024 * 1024;
         
@@ -4540,13 +4514,11 @@
         }
 
         try {
-            // Сжатие изображений
             if (file.type.startsWith('image/')) {
                 showToastNotification('Сжимаем изображение...', 'info');
                 file = await compressImage(file);
             }
 
-            // Проверка размера видео
             if (file.type.startsWith('video/') && file.size > 100 * 1024 * 1024) {
                 showToastNotification('Видео большое, но будет загружено', 'warning');
             }
@@ -4555,16 +4527,13 @@
             const fileSize = file.size;
             const fileType = file.type || 'application/octet-stream';
             
-            // Создаем уникальный путь в Storage
             const timestamp = Date.now();
             const safeFileName = fileName.replace(/[^a-zA-Z0-9._-]/g, '_');
             const storagePath = `chats/${currentChat.id}/${timestamp}_${safeFileName}`;
             const storageRef = ref(storage, storagePath);
 
-            // Показываем прогресс
             const { progressBar, progressText } = showUploadProgress(fileName, fileSize);
 
-            // Resumable upload
             const metadata = {
                 contentType: fileType,
                 customMetadata: {
@@ -4577,7 +4546,6 @@
 
             currentUploadTask = uploadBytesResumable(storageRef, file, metadata);
 
-            // Отслеживаем прогресс
             currentUploadTask.on('state_changed',
                 (snapshot) => {
                     updateUploadProgress(progressBar, progressText, snapshot);
@@ -4595,19 +4563,16 @@
                     currentUploadTask = null;
                 },
                 async () => {
-                    // Загрузка завершена, получаем URL
                     const downloadURL = await getDownloadURL(currentUploadTask.snapshot.ref);
                     
                     document.getElementById('uploadProgressContainer').style.display = 'none';
                     
-                    // Определяем тип сообщения
                     const messageType = fileType.startsWith('image/') ? 'image' : 
                                       fileType.startsWith('video/') ? 'video' : 'file';
                     
                     const messageText = messageType === 'image' ? '[Изображение]' :
                                       messageType === 'video' ? '[Видео]' : '[Файл]';
 
-                    // Создаем сообщение в Firestore
                     const messageData = {
                         chatId: currentChat.id,
                         senderId: currentUser.id,
@@ -4631,7 +4596,6 @@
 
                     await addDoc(collection(db, 'messages'), messageData);
 
-                    // Обновляем последнее сообщение в чате
                     let lastMessage = messageText;
                     if (messageType === 'image') {
                         lastMessage = '🖼️ Изображение';
@@ -4649,7 +4613,6 @@
                     showToastNotification('Файл успешно загружен!', 'success');
                     currentUploadTask = null;
                     
-                    // Обновляем сообщения
                     loadMessages(currentChat.id);
                     loadChats();
                     
@@ -4664,15 +4627,12 @@
         }
     }
 
-    // ==================== ОСНОВНЫЕ ФУНКЦИИ ====================
     function initEventListeners() {
-        // Авторизация
         document.getElementById('loginBtn').addEventListener('click', login);
         document.getElementById('registerBtn').addEventListener('click', register);
         document.getElementById('showRegisterBtn').addEventListener('click', showRegister);
         document.getElementById('showLoginBtn').addEventListener('click', showLogin);
 
-        // Навигация
         document.getElementById('profileBtn').addEventListener('click', showProfile);
         document.getElementById('newChatBtn').addEventListener('click', showNewChatModal);
         document.getElementById('backToChatsBtn').addEventListener('click', backToChats);
@@ -4681,7 +4641,6 @@
             showScreen('chatScreen');
         });
 
-        // Поиск
         document.getElementById('searchUsersInput').addEventListener('input', function(e) {
             const query = e.target.value.trim();
             
@@ -4718,7 +4677,6 @@
             }, 300);
         });
 
-        // Сообщения
         document.getElementById('sendMessageBtn').addEventListener('click', sendMessage);
         document.getElementById('attachBtn').addEventListener('click', () => {
             document.getElementById('fileUpload').click();
@@ -4744,7 +4702,6 @@
             }
         });
 
-        // Видеосообщения
         document.getElementById('videoMessageBtn').addEventListener('click', startVideoRecording);
         document.getElementById('recordStartBtn').addEventListener('click', startRecordingVideo);
         document.getElementById('recordStopBtn').addEventListener('click', stopRecordingVideo);
@@ -4752,21 +4709,16 @@
         document.getElementById('cancelVideoRecordingBtn').addEventListener('click', closeVideoRecordingModal);
         document.getElementById('sendVideoMessageBtn').addEventListener('click', sendVideoMessage);
 
-        // Профиль
         document.getElementById('editNameBtn').addEventListener('click', editName);
         document.getElementById('logoutBtn').addEventListener('click', logout);
         document.getElementById('showAvatarModalBtn').addEventListener('click', showAvatarModal);
         document.getElementById('createPostBtn').addEventListener('click', createPost);
-        
-        // ТЕСТОВАЯ КНОПКА УВЕДОМЛЕНИЯ
         document.getElementById('testNotificationBtn').addEventListener('click', testNotification);
 
-        // Аватарка
         document.getElementById('avatarUpload').addEventListener('change', function(e) {
             handleAvatarUpload(e.target.files[0]);
         });
 
-        // Файлы - ИСПОЛЬЗУЕМ НОВУЮ ФУНКЦИЮ ДЛЯ БОЛЬШИХ ФАЙЛОВ
         document.getElementById('fileUpload').addEventListener('change', function(e) {
             const files = e.target.files;
             for (let i = 0; i < files.length; i++) {
@@ -4774,7 +4726,6 @@
             }
         });
 
-        // Модальные окна
         document.getElementById('cancelAvatarBtn').addEventListener('click', closeAvatarModal);
         document.getElementById('saveAvatarBtn').addEventListener('click', saveAvatar);
         document.getElementById('uploadAvatarBtn').addEventListener('click', () => {
@@ -4787,7 +4738,6 @@
             });
         });
 
-        // Группы
         document.getElementById('createGroupBtn').addEventListener('click', createGroup);
         document.getElementById('createChannelBtn').addEventListener('click', createChannel);
         document.getElementById('cancelGroupBtn').addEventListener('click', closeGroupModal);
@@ -4803,7 +4753,6 @@
             });
         });
 
-        // Голосовые сообщения
         const voiceBtn = document.getElementById('voiceBtn');
         voiceBtn.addEventListener('mousedown', startVoiceRecording);
         voiceBtn.addEventListener('touchstart', startVoiceRecording);
@@ -4813,7 +4762,6 @@
 
         document.getElementById('disableCallBtn').addEventListener('click', toggleCallsDisabled);
 
-        // Звонки
         document.getElementById('callBtn').addEventListener('click', () => {
             if (isCallDisabled) {
                 showToastNotification('Звонки отключены. Включите их в настройках.', 'warning');
@@ -4939,7 +4887,6 @@
             }
         });
 
-        // НОВЫЕ ОБРАБОТЧИКИ: поиск сообщений
         const searchInput = document.getElementById('searchMessagesInput');
         searchInput.addEventListener('input', (e) => {
             if (searchTimeout) clearTimeout(searchTimeout);
@@ -4950,7 +4897,6 @@
         document.getElementById('prevSearchBtn').addEventListener('click', prevSearchResult);
         document.getElementById('nextSearchBtn').addEventListener('click', nextSearchResult);
 
-        // Подписка на каналы
         document.getElementById('channelSubscribeBtn')?.addEventListener('click', async () => {
             const channelId = currentChat?.id;
             if (channelId) await subscribeToChannel(channelId);
@@ -4960,14 +4906,12 @@
             if (channelId) await unsubscribeFromChannel(channelId);
         });
 
-        // Управление звонками
         document.getElementById('muteCallBtnVideo').addEventListener('click', toggleMute);
         document.getElementById('muteCallBtnAudio').addEventListener('click', toggleMute);
         document.getElementById('speakerCallBtnVideo').addEventListener('click', toggleSpeaker);
         document.getElementById('speakerCallBtnAudio').addEventListener('click', toggleSpeaker);
         document.getElementById('videoToggleBtn').addEventListener('click', toggleVideo);
 
-        // Ответы на сообщения
         document.getElementById('cancelReplyBtn').addEventListener('click', cancelReply);
         document.getElementById('profileAvatarContainer').addEventListener('click', () => {
             if (currentUser && currentUser.avatar) {
@@ -7662,9 +7606,7 @@
         document.getElementById('replyingIndicator').classList.add('hidden');
     }
 
-    // УСТАРЕВШАЯ ФУНКЦИЯ - заменена на uploadLargeFile
     async function handleFileUpload(files) {
-        // Используем новую функцию uploadLargeFile
         for (let i = 0; i < files.length; i++) {
             await uploadLargeFile(files[i]);
         }
@@ -7852,9 +7794,6 @@
         video.play().catch(e => console.warn('Не удалось воспроизвести видео:', e));
     }
 
-    // Функция для запроса разрешения (уже объявлена выше - requestNotificationPermissionFunc)
-    // Используем её.
-
     function setupChatUserStatusListener() {
         if (!currentChat || currentChat.isGroup || currentChat.isChannel || !currentChat.otherUser) return;
         
@@ -7919,7 +7858,6 @@
         }
     }
 
-    // ==================== ФУНКЦИИ ДЛЯ ВИДЕОСООБЩЕНИЙ ====================
     async function startVideoRecording() {
         try {
             const constraints = {
@@ -8114,7 +8052,6 @@
         reader.readAsDataURL(videoBlob);
     }
 
-    // Функция для отправки большого видео (использует общую логику с файлами)
     async function sendLargeVideoMessage(videoBlob, duration) {
         showToastNotification('Видео большое, разбиваем на части...', 'info');
         
@@ -8216,7 +8153,6 @@
         }
     }
 
-    // Функция для скачивания большого видео (использует общую логику с файлами)
     async function downloadLargeVideo(fileId) {
         await downloadLargeFile(fileId);
     }
@@ -8255,9 +8191,6 @@
         document.getElementById('recordingIndicator').style.display = 'none';
     }
 
-    // Переименованная функция для проверки размера видео (уже объявлена как validateVideoSize)
-    // Используем validateVideoSize вместо удалённой compressVideo
-
     async function readFileAsBase64(file) {
         return new Promise((resolve, reject) => {
             const reader = new FileReader();
@@ -8267,9 +8200,7 @@
         });
     }
 
-    // УСТАРЕВШАЯ ФУНКЦИЯ - используем Firebase Storage вместо чанков
     async function sendLargeFile(file, chatId, messageType) {
-        // Используем новую функцию uploadLargeFile
         await uploadLargeFile(file);
         return true;
     }
@@ -8286,7 +8217,6 @@
         });
     }
 
-    // ИСПРАВЛЕННАЯ функция скачивания большого файла
     async function downloadLargeFile(fileId) {
         try {
             showLoading(true);
@@ -8350,7 +8280,6 @@
         }
     }
 
-    // Конвертер base64 в Uint8Array
     function base64ToUint8Array(base64) {
         const binaryString = atob(base64);
         const bytes = new Uint8Array(binaryString.length);
@@ -8360,7 +8289,6 @@
         return bytes;
     }
 
-    // Улучшенная функция сохранения файла на устройство
     async function saveFileToDevice(fileData, fileName, fileType) {
         try {
             showLoading(true);
@@ -8464,7 +8392,6 @@
         showDownloadNotification(fileName);
     }
 
-    // Главная функция для скачивания файлов из сообщений
     function downloadFileFromMessage(fileDataOrId, fileName, fileType) {
         try {
             if (fileDataOrId && (fileDataOrId.startsWith('file_') || fileDataOrId.startsWith('video_'))) {
@@ -9443,7 +9370,6 @@
         return 'call_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
     }
 
-    // ==================== УВЕДОМЛЕНИЯ О ЗВОНКАХ ====================
     async function setupCallListeners() {
         if (!currentUser || authError) return;
 
@@ -9535,7 +9461,6 @@
         ringtone.currentTime = 0;
     }
 
-    // ==================== ФУНКЦИИ ДЛЯ ЗАГРУЗКИ ФАЙЛОВ ====================
     function createUploadProgress(fileId, fileName, fileSize) {
         const progressContainer = document.createElement('div');
         progressContainer.className = 'upload-progress-container';
@@ -9563,11 +9488,9 @@
     }
 
     async function uploadFileWithProgress(file, messageElementId = null) {
-        // УСТАРЕВШАЯ ФУНКЦИЯ - используем Firebase Storage
         await uploadLargeFile(file);
     }
 
-    // ==================== НОВЫЕ ФУНКЦИИ ====================
     function showEditMessageModal(messageId, currentText) {
         currentlyEditingMessage = messageId;
         const newText = prompt('Редактировать сообщение:', currentText);
@@ -9661,7 +9584,6 @@
         }
     }
 
-    // ==================== ФУНКЦИИ ДЛЯ НЕПРОЧИТАННЫХ СООБЩЕНИЙ ====================
     function updateUnreadCounts() {
         if (!currentUser) return;
         
@@ -9778,7 +9700,6 @@
         }
     }
 
-    // ==================== ФУНКЦИИ ДЛЯ КАНАЛОВ ====================
     async function createChannel() {
         const channelName = document.getElementById('channelName').value.trim();
         const channelDesc = document.getElementById('channelDescription').value.trim();
@@ -9933,7 +9854,6 @@
         }
     }
 
-    // ==================== ФУНКЦИИ ДЛЯ ПОИСКА СООБЩЕНИЙ ====================
     function searchMessages(query) {
         if (!query.trim()) {
             currentMessageSearch = { index: 0, results: [] };
@@ -9999,7 +9919,6 @@
             `${currentMessageSearch.index + 1}/${currentMessageSearch.results.length}`;
     }
 
-    // ==================== ФУНКЦИИ ДЛЯ ИНДИКАТОРОВ НАБОРА ТЕКСТА ====================
     function setupTypingListener(chatId) {
         if (!chatId || typingListeners.has(chatId) || authError) return;
         
@@ -10095,7 +10014,6 @@
         }
     }
 
-    // ==================== ФУНКЦИИ ДЛЯ ИНДИКАТОРОВ ЗВОНКОВ ====================
     function setupCallRingingListener(chatId) {
         if (!chatId || callRingingListeners.has(chatId) || authError) return;
         
@@ -10138,7 +10056,6 @@
         ringingEl.classList.add('hidden');
     }
 
-    // ==================== ФУНКЦИИ ДЛЯ ИСТОРИИ (ПОСТЫ) ====================
     function createPost() {
         const postText = prompt('Введите текст поста (до 200 символов):');
         if (!postText || postText.trim() === '') return;
@@ -10159,7 +10076,6 @@
         showToastNotification('Пост добавлен в историю', 'success');
     }
 
-    // ==================== ФУНКЦИИ ДЛЯ КАСТОМНЫХ РЕАКЦИЙ ====================
     let currentReactionMessageId = null;
 
     function showCustomReactionModal(messageId) {
@@ -10190,7 +10106,6 @@
         });
     });
 
-    // ==================== ИНИЦИАЛИЗАЦИЯ ====================
     function init() {
         console.log("🚀 Инициализация AbSgram 7.5 HD...");
         initEventListeners();
