@@ -1,3 +1,4 @@
+ 
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -4442,17 +4443,6 @@
             img.onerror = () => reject(new Error('Ошибка загрузки изображения'));
             img.src = URL.createObjectURL(file);
         });
-    }
-
-    async function validateVideoSize(file, maxSizeMB = 500) {
-        const maxSizeBytes = maxSizeMB * 1024 * 1024;
-        
-        if (file.size <= maxSizeBytes) {
-            return file;
-        }
-        
-        showToastNotification(`Видео слишком большое (${formatFileSize(file.size)}). Максимальный размер 500MB.`, 'error');
-        throw new Error('Файл слишком большой');
     }
 
     function showUploadProgress(fileName, fileSize) {
@@ -10203,3 +10193,4 @@
     </script>
 </body>
 </html>
+ 
